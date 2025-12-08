@@ -1,6 +1,6 @@
 name: TeleportManager
 version: 1.0.0
-main: Firekid846\TeleportManager\TeleportManager
+main: TeleportManager\Main
 api: 5.0.0
 author: Firekid846
 description: Advanced teleport management system
