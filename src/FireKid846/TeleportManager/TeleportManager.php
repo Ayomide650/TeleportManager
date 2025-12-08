@@ -177,4 +177,5 @@ class TeleportManager extends PluginBase {
 
         return true;
     }
+
 }
