@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Firekid846\TeleportManager;
+namespace TeleportManager;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
@@ -12,7 +12,7 @@ use pocketmine\Server;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\world\Position;
 
-class TeleportManager extends PluginBase {
+class Main extends PluginBase {
 
     protected function onEnable(): void {
         $this->getLogger()->info(TF::GREEN . "TeleportManager by Firekid846 enabled!");
@@ -177,5 +177,4 @@ class TeleportManager extends PluginBase {
 
         return true;
     }
-
 }
