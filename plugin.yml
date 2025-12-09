@@ -1,45 +1,47 @@
-name: TeleportManager
+name: BedrockEconomy
 version: 1.0.0
-main: TeleportManager\Main
+main: BedrockEconomy\Main
 api: 5.0.0
 author: Firekid846
-description: Advanced teleport management system
+description: Custom economy system for Firekid846's server
 
 commands:
-  tp:
-    description: Teleport to a player or teleport player1 to player2
-    usage: "/tp <player> or /tp <player1> <player2>"
-    permission: teleportmanager.tp
-  tphere:
-    description: Teleport a player to you
-    usage: "/tphere <player>"
-    permission: teleportmanager.tphere
-  tpall:
-    description: Teleport all players to you
-    usage: "/tpall"
-    permission: teleportmanager.tpall
-  tppos:
-    description: Teleport to coordinates
-    usage: "/tppos <x> <y> <z> [world]"
-    permission: teleportmanager.tppos
-  tpworld:
-    description: Teleport to a world's spawn
-    usage: "/tpworld <world>"
-    permission: teleportmanager.tpworld
+  bal:
+    description: Check your balance
+    usage: "/bal [player]"
+    aliases: ["balance", "money"]
+    permission: bedrockeconomy.command.bal
+  richest:
+    description: View top 10 richest players
+    usage: "/richest"
+    aliases: ["baltop", "topmoney"]
+    permission: bedrockeconomy.command.richest
+  pay:
+    description: Pay another player
+    usage: "/pay <player> <amount>"
+    permission: bedrockeconomy.command.pay
+  eco:
+    description: Admin economy commands
+    usage: "/eco <give|take|set|reset> <player> [amount]"
+    permission: bedrockeconomy.admin
+  shop:
+    description: Open server shop (Use NPC in lobby)
+    usage: "/shop"
+    permission: bedrockeconomy.command.shop
 
 permissions:
-  teleportmanager.tp:
-    description: Allows teleporting to players
+  bedrockeconomy.admin:
+    description: Allows using admin economy commands
     default: op
-  teleportmanager.tphere:
-    description: Allows teleporting players to you
-    default: op
-  teleportmanager.tpall:
-    description: Allows teleporting all players to you
-    default: op
-  teleportmanager.tppos:
-    description: Allows teleporting to coordinates
-    default: op
-  teleportmanager.tpworld:
-    description: Allows teleporting to worlds
-    default: op
+  bedrockeconomy.command.bal:
+    description: Allows using /bal command
+    default: true
+  bedrockeconomy.command.richest:
+    description: Allows using /richest command
+    default: true
+  bedrockeconomy.command.pay:
+    description: Allows using /pay command
+    default: true
+  bedrockeconomy.command.shop:
+    description: Allows using /shop command
+    default: true
